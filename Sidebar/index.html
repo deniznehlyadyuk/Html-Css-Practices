@@ -1,0 +1,419 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sidebar 1</title>
+
+    <!--Including CSS File-->
+    <link href="styles.css" rel="stylesheet">
+
+    <!--Font Awesome 6.1.1-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!--Google Fonts - Roboto-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="sidebar" onmouseover="onSidebarHover()" onmouseleave="onSidebarMouseLeave()">
+    <header>
+        <div class="picture">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1024px-Angular_full_color_logo.svg.png" alt="sidebar-logo">
+        </div>
+        <div class="title">
+            market-fx.ts
+        </div>
+        <button id="scale-down-button" class="action-button" onclick="makeMobileView()">
+            <i class="fa-solid fa-arrow-left-long"></i>
+        </button>
+        <button id="expand-button" class="action-button" onclick="expandSidebar()">
+            <i class="fa-solid fa-anchor"></i>
+        </button>
+    </header>
+    <main>
+        <div class="tab-button-wrapper">
+            <button class="tab-button selected" onclick="openTab('general-tab')">
+                General
+            </button>
+            <button class="tab-button" onclick="openTab('schedule-tab')">
+                Schedule
+            </button>
+        </div>
+        <div class="tab-wrapper">
+            <div id="general-tab" class="tab open">
+                <div class="group">
+                    <div class="title">
+                        Overview
+                    </div>
+                    <div class="dropdown-button">
+                        <a class="menu-item dropdown-header" href="#">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span class="text">
+                                Dashboard
+                            </span>
+                        </a>
+                        <div class="dropdown-item-wrapper">
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    CPU Usage
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    User Statistics
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    Virtual Machines
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown-button">
+                        <a class="menu-item dropdown-header" href="#">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <span class="text">
+                                Market News
+                            </span>
+                        </a>
+                        <div class="dropdown-item-wrapper">
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    CPU Usage
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    Forecasts
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    Market Outlook
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span class="text">
+                            Real Time News
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-chart-column"></i>
+                        <span class="text">
+                            Rates
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="text">
+                            Economic Calendar
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-align-left"></i>
+                        <span class="text">
+                            Pivot Points
+                        </span>
+                    </a>
+                </div>
+                <div class="group">
+                    <div class="title">
+                        Overview
+                    </div>
+                    <div class="dropdown-button">
+                        <a class="menu-item dropdown-header" href="#">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span class="text">
+                                Dashboard
+                            </span>
+                        </a>
+                        <div class="dropdown-item-wrapper">
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    CPU Usage
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    User Statistics
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    Virtual Machines
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown-button">
+                        <a class="menu-item dropdown-header" href="#">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <span class="text">
+                                Market News
+                            </span>
+                        </a>
+                        <div class="dropdown-item-wrapper">
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    CPU Usage
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    Forecasts
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    Market Outlook
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span class="text">
+                            Real Time News
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-chart-column"></i>
+                        <span class="text">
+                            Rates
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="text">
+                            Economic Calendar
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-align-left"></i>
+                        <span class="text">
+                            Pivot Points
+                        </span>
+                    </a>
+                </div>
+                <div class="group">
+                    <div class="title">
+                        Account
+                    </div>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="text">
+                            Notifications
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="text">
+                            Settings
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div id="schedule-tab" class="tab">
+                <div class="group">
+                    <div class="title">
+                        Overview
+                    </div>
+                    <div class="dropdown-button">
+                        <a class="menu-item dropdown-header" href="#">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span class="text">
+                                Dashboard
+                            </span>
+                        </a>
+                        <div class="dropdown-item-wrapper">
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    CPU Usage
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    User Statistics
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    Virtual Machines
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown-button">
+                        <a class="menu-item dropdown-header" href="#">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <span class="text">
+                                Market News
+                            </span>
+                        </a>
+                        <div class="dropdown-item-wrapper">
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    CPU Usage
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    Forecasts
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    Market Outlook
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span class="text">
+                            Real Time News
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-chart-column"></i>
+                        <span class="text">
+                            Rates
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="text">
+                            Economic Calendar
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-align-left"></i>
+                        <span class="text">
+                            Pivot Points
+                        </span>
+                    </a>
+                </div>
+                <div class="group">
+                    <div class="title">
+                        Overview
+                    </div>
+                    <div class="dropdown-button">
+                        <a class="menu-item dropdown-header" href="#">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span class="text">
+                                Dashboard
+                            </span>
+                        </a>
+                        <div class="dropdown-item-wrapper">
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    CPU Usage
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    User Statistics
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    Virtual Machines
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown-button">
+                        <a class="menu-item dropdown-header" href="#">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <span class="text">
+                                Market News
+                            </span>
+                        </a>
+                        <div class="dropdown-item-wrapper">
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    CPU Usage
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    Forecasts
+                                </span>
+                            </a>
+                            <a class="menu-item dropdown-item" href="#">
+                                <span class="text">
+                                    Market Outlook
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span class="text">
+                            Real Time News
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-chart-column"></i>
+                        <span class="text">
+                            Rates
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="text">
+                            Economic Calendar
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-align-left"></i>
+                        <span class="text">
+                            Pivot Points
+                        </span>
+                    </a>
+                </div>
+                <div class="group">
+                    <div class="title">
+                        Account
+                    </div>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="text">
+                            Notifications
+                        </span>
+                    </a>
+                    <a class="menu-item" href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <span class="text">
+                            Settings
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="picture">
+            <img src="img.png" alt="profile">
+        </div>
+        <div class="title-wrapper">
+            <div class="full-name">
+                Simon Brückner
+            </div>
+            <div class="email">
+                simon.b@marketfx.com
+            </div>
+        </div>
+        <button class="more-action-button">
+            <i class="fa-solid fa-ellipsis"></i>
+        </button>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
